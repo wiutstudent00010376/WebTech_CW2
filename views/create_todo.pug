@@ -1,0 +1,19 @@
+extends layout.pug
+
+block content
+  main.create-todo
+    h2.form-title New ToDo
+    
+    if success
+      p.success Your task was sucessfully added!
+
+    if error
+      p.error Sorry, Your ToDo cannot be empty!
+
+    form(method="POST")
+      label.label Title
+      input(class="todo-input" name="title")
+      
+      label.label Body
+      textarea(class="todo-input" name="body" rows="10")
+      button.create-todo-btn Create todo

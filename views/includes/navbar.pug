@@ -1,0 +1,13 @@
+mixin link(href, name)
+  a(href=href)&attributes(attributes)= name
+
+header.navbar
+  h1.logo 
+    a(href="/") ToDo App
+
+  nav.nav
+    ul.nav-items
+      li.nav-item 
+        +link('/todos', 'All todos')(class="nav-link")
+      li.nav-item 
+        +link('/todos/create-todo', 'Create ToDo')(class="nav-link")
